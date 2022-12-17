@@ -3,7 +3,8 @@
   On: push
     jobs:
    first-job:
-     runs-on:windows-latest
-     stepa:
-   -run: node --version
-   -run: npm --version
+     runs-on: windows-latest
+     container: node:17.6.0
+     steps:
+       -run: node --version
+       -run: npm --version
